@@ -1,0 +1,24 @@
+@forward '@styles/blocks/close-button';
+@forward '@styles/blocks/form';
+@use '@styles/global/variables' as vars;
+@use '@styles/global/mixins' as mixins;
+
+.edit-employee-page {
+  @include mixins.default-centered-page;
+
+  &__wrapper {
+    margin-top: 230px;
+  }
+
+  &__title-wrapper {
+    margin-bottom: 26px;
+  }
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: vars.$color-slugger;
+  }
+}

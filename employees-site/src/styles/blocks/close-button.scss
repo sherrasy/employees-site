@@ -1,0 +1,16 @@
+@use '@styles/global/variables' as vars;
+
+.close-button {
+  position: absolute;
+  top: 59px;
+  right: 113px;
+  background-color: vars.$color-white;
+  border: none;
+  cursor: pointer;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    padding-left: 14px;
+  }
+}

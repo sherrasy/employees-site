@@ -1,0 +1,86 @@
+@use '@styles/global/variables' as vars;
+
+.form {
+  &__fields {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: max-content;
+  }
+
+  &__field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    gap: 20px;
+  }
+
+  &__field input {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid vars.$color-slugger;
+  }
+
+  &__error {
+    position: relative;
+    bottom: 14px;
+    height: 1px;
+    margin: 0;
+    font-size: 14px;
+    color: vars.$color-bronze;
+    align-self: flex-end;
+  }
+
+  &__submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: min-content;
+    padding: 10px 14px;
+    color: vars.$color-bronze;
+    background-color: vars.$color-hint-of-red;
+    border: 1px solid vars.$color-hint-of-red;
+    border-radius: 10px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+  }
+
+  &__submit:hover {
+    background-color: vars.$color-hint-of-red-hover;
+    border: 1px solid vars.$color-bronze;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .add-employees-form {
+    &__fields {
+      gap: 10px;
+      width: 300px;
+    }
+
+    &__field input {
+      padding: 6px;
+    }
+
+    &__error {
+      font-size: 12px;
+    }
+
+    &__submit {
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+  }
+}
