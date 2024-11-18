@@ -1,0 +1,51 @@
+@use '@styles/global/variables' as vars;
+.filters-form {
+  &__fields {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    column-gap: 5px;
+    justify-items: center;
+  }
+
+  &__field span {
+    margin-right: 10px;
+  }
+
+  &__submit,
+  &__reset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: min-content;
+    padding: 10px 14px;
+    border-radius: 10px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+  }
+  &__submit {
+    color: vars.$color-bronze;
+    background-color: vars.$color-hint-of-red;
+    border: 1px solid vars.$color-hint-of-red;
+  }
+  &__reset {
+    color: vars.$color-linen;
+    background-color: vars.$color-slugger;
+    border: 1px solid vars.$color-slugger;
+  }
+
+  &__submit:hover {
+    background-color: vars.$color-hint-of-red-hover;
+    border: 1px solid vars.$color-bronze;
+    cursor: pointer;
+  }
+
+  &__reset:hover {
+    color: vars.$color-slugger;
+    background-color: vars.$color-linen;
+    border: 1px solid vars.$color-slugger;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,79 @@
+@use '@styles/global/variables' as vars;
+@forward '@styles/blocks/filters';
+
+.employees-table {
+  &__content {
+    min-height: 30vh;
+    max-height: 70vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: vars.$color-bronze vars.$color-hint-of-red;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 30px;
+    padding: 0 30px;
+    border-radius: 20px;
+  }
+
+  &__row {
+    color: vars.$color-bronze;
+    &.row-archived {
+      color: vars.$color-hurricane;
+      text-decoration: line-through;
+    }
+  }
+
+  &__row:hover {
+    background-color: vars.$color-linen;
+    cursor: pointer;
+  }
+
+  &__row-cell {
+    min-width: 140px;
+  }
+
+  &__sort-icon {
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    &.sort-arrow {
+      margin-left: 4px;
+    }
+
+    &.sort-arrow--reverse {
+      margin-left: 4px;
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+
+    &.sort-arrow--none {
+      opacity: 0.3;
+    }
+  }
+
+  &__header-row {
+    display: grid;
+    grid-template-columns: 70px 150px 1fr;
+    align-items: center;
+    grid-column-gap: 40px;
+    margin-bottom: 12px;
+    padding: 0 30px;
+    font-size: 16px;
+    color: vars.$color-slugger;
+    border-bottom: 2px solid vars.$color-hurricane;
+  }
+
+  &__header-row-cell.sorting-toggle:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__header-row-cell.sorting-toggle {
+    border-right: 2px solid vars.$color-hurricane;
+  }
+}
