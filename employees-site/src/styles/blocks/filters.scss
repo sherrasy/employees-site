@@ -8,6 +8,7 @@
     column-gap: 5px;
     justify-items: center;
     margin-bottom: 8px;
+    border-left: none;
   }
 
   &__field span {
@@ -36,13 +37,27 @@
   .filters-form {
     &__fields {
       grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 10px;
       grid-row-gap: 8px;
       padding-left: 10px;
       border-left: 2px dotted vars.$color-hurricane;
+      justify-items: start;
     }
     &__submit,
     &__reset {
       padding: 4px 6px;
+    }
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .filters-form {
+    &__fields {
+      border-left: none;
+    }
+
+    &__field {
+      width: 100px;
     }
   }
 }
