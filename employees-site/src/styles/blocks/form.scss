@@ -1,0 +1,73 @@
+@use '@styles/global/variables' as vars;
+@use '@styles/global/mixins' as mixins;
+
+.form {
+  &__fields {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    gap: 20px;
+  }
+
+  &__field input {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid vars.$color-slugger;
+  }
+
+  &__error {
+    position: relative;
+    bottom: 14px;
+    height: 1px;
+    margin: 0;
+    font-size: 14px;
+    color: vars.$color-bronze;
+    align-self: flex-end;
+  }
+
+  &__submit {
+    @include mixins.default-button(vars.$color-bronze, vars.$color-hint-of-red);
+    padding: 15px 30px;
+    align-self: center;
+    gap: 10px;
+    width: min-content;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    &:hover {
+      background-color: vars.$color-hint-of-red-hover;
+      border: 1px solid vars.$color-bronze;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .add-employees-form {
+    &__fields {
+      gap: 10px;
+      width: 300px;
+    }
+
+    &__field input {
+      padding: 6px;
+    }
+
+    &__error {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use '@styles/global/variables' as vars;
+@use '@styles/global/mixins' as mixins;
+.error-message {
+  @include mixins.default-centered-element;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  font-size: 30px;
+
+  &__info {
+    color: vars.$color-hurricane;
+  }
+
+  &__back-link {
+    color: vars.$color-bronze;
+  }
+  &__back-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

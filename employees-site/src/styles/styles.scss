@@ -1,0 +1,16 @@
+// Global
+//-----------------
+
+@use './vendor/normalize';
+@use './global/variables';
+@use './global/mixins';
+
+// Blocks
+//-----------------
+@use './blocks/error-message';
+
+// Pages
+//-----------------
+@use './pages/main-page';
+@use './pages/add-employee-page';
+@use './pages/edit-employee-page';

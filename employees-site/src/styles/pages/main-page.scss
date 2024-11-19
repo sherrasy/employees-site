@@ -1,0 +1,38 @@
+@use '@styles/global/variables' as vars;
+@use '@styles/global/mixins' as mixins;
+@forward '@styles/blocks/add-button';
+@forward '@styles/blocks/table';
+
+.main-page {
+  @include mixins.default-centered-page;
+
+  &__title-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 20px;
+    padding: 0 30px;
+  }
+
+  &__title {
+    @include mixins.default-title;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-page {
+    &__title-wrapper {
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding: 0 10px;
+    }
+  }
+}

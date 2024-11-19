@@ -1,0 +1,14 @@
+.close-button {
+  position: relative;
+  bottom: 20px;
+  left: 85%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    padding-left: 14px;
+  }
+}
