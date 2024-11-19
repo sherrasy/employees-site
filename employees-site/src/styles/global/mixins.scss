@@ -1,3 +1,5 @@
+@use '@styles/global/variables' as vars;
+
 @mixin default-centered-element {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,6 +11,29 @@
 
 @mixin default-centered-page {
   @include default-centered-element;
+  align-items: center;
   min-height: 100vh;
   font-size: 16px;
+}
+
+@mixin default-button($color, $bg-color) {
+  padding: 15px;
+  margin-bottom: 2px;
+  text-align: center;
+  color: $color;
+  background-color: $bg-color;
+  border: 0;
+  border-radius: 30px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin default-title {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: vars.$color-slugger;
 }

@@ -1,7 +1,11 @@
 @use '@styles/global/variables' as vars;
 @forward '@styles/blocks/filters';
+@use '@styles/global/mixins' as mixins;
 
 .employees-table {
+  @include mixins.default-centered-element;
+  max-width: 90vw;
+
   &__content {
     min-height: 30vh;
     max-height: 70vh;
@@ -72,8 +76,32 @@
     text-decoration: underline;
     cursor: pointer;
   }
+}
 
-  &__header-row-cell.sorting-toggle {
-    border-right: 2px solid vars.$color-hurricane;
+@media screen and (max-width: 767px) {
+  .employees-table {
+    &__row {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      padding: 0 10px;
+      margin: 8px 0;
+      border: 1px solid vars.$color-hurricane;
+    }
+
+    &__row-cell {
+      min-width: 80px;
+      margin: 5px;
+    }
+
+    &__header-row {
+      grid-template-columns: 50px 90px 1fr;
+      grid-column-gap: 8px;
+      grid-row-gap: 10px;
+      margin-bottom: 2px;
+      align-items: center;
+      padding: 0 10px;
+      font-size: 14px;
+    }
   }
 }

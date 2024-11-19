@@ -1,10 +1,8 @@
-@use '@styles/global/variables' as vars;
-
 .close-button {
-  position: absolute;
-  top: 59px;
-  right: 113px;
-  background-color: vars.$color-white;
+  position: relative;
+  bottom: 20px;
+  left: 85%;
+  background-color: transparent;
   border: none;
   cursor: pointer;
 

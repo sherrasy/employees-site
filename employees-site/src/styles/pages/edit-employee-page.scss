@@ -7,7 +7,7 @@
   @include mixins.default-centered-page;
 
   &__wrapper {
-    margin-top: 230px;
+    padding: 10px;
   }
 
   &__title-wrapper {
@@ -15,10 +15,6 @@
   }
 
   &__title {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 30px;
-    font-weight: 700;
-    color: vars.$color-slugger;
+    @include mixins.default-title;
   }
 }

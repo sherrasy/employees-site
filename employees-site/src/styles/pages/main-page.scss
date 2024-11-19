@@ -6,11 +6,6 @@
 .main-page {
   @include mixins.default-centered-page;
 
-  &__wrapper {
-    width: max-content;
-    margin-top: 44px;
-  }
-
   &__title-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -27,10 +22,17 @@
   }
 
   &__title {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 30px;
-    font-weight: 700;
-    color: vars.$color-slugger;
+    @include mixins.default-title;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-page {
+    &__title-wrapper {
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding: 0 10px;
+    }
   }
 }

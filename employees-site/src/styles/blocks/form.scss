@@ -1,4 +1,5 @@
 @use '@styles/global/variables' as vars;
+@use '@styles/global/mixins' as mixins;
 
 .form {
   &__fields {
@@ -7,7 +8,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: max-content;
   }
 
   &__field {
@@ -41,25 +41,17 @@
   }
 
   &__submit {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    align-items: center;
+    @include mixins.default-button(vars.$color-bronze, vars.$color-hint-of-red);
+    padding: 15px 30px;
+    align-self: center;
     gap: 10px;
     width: min-content;
-    padding: 10px 14px;
-    color: vars.$color-bronze;
-    background-color: vars.$color-hint-of-red;
-    border: 1px solid vars.$color-hint-of-red;
-    border-radius: 10px;
     -webkit-box-align: center;
     -ms-flex-align: center;
-  }
-
-  &__submit:hover {
-    background-color: vars.$color-hint-of-red-hover;
-    border: 1px solid vars.$color-bronze;
-    cursor: pointer;
+    &:hover {
+      background-color: vars.$color-hint-of-red-hover;
+      border: 1px solid vars.$color-bronze;
+    }
   }
 }
 
@@ -76,11 +68,6 @@
 
     &__error {
       font-size: 12px;
-    }
-
-    &__submit {
-      padding: 6px 10px;
-      border-radius: 6px;
     }
   }
 }
