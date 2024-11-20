@@ -22,7 +22,7 @@ function Filters(): JSX.Element {
     
       return (
         <form onSubmit={handleSubmit(handleFiltersSubmit)}>
-          <div className='employees-table__header-row-cell filters-form__fields'>
+          <div className='employees-table__header-row-cell filters-form__fields' data-testid="employee-filters">
             <label className='filters-form__field'>
               <span>{LabelName.Role} </span>
               <select {...register(FormFieldName.Role)}>

@@ -13,6 +13,7 @@ function AddButton(): JSX.Element {
       className='main-page__add-button add-button'
       type='button'
       onClick={handleRedirect}
+      data-testid="add-employee-button"
     >
       <span className='add-button__text'>Добавить</span>
       <svg className='add-button__icon'>

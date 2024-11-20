@@ -13,7 +13,7 @@ function TableRow({ employee }: TableRowProps): JSX.Element {
       navigate(`${AppRoute.EditEmployee}/${id}`);
     };
     return (
-        <div className={`employees-table__row ${isArchive ? 'row-archived':''}`} onClick={handleRedirect}>
+        <div data-testid='table-row-content' className={`employees-table__row ${isArchive ? 'row-archived':''}`} onClick={handleRedirect}>
             <p className='employees-table__row-cell'>{name}</p>
             <p className='employees-table__row-cell'>{phone}</p>
             <p className='employees-table__row-cell'>{birthday}</p>
