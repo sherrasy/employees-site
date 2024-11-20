@@ -61,7 +61,7 @@ function EditEmployeeForm({ employee }: EditEmployeeFormProps): JSX.Element {
 
   return (
     <form onSubmit={handleSubmit(handleEmployeeSubmit)}>
-      <div className='form__fields'>
+      <div className='form__fields' data-testid="edit-employee">
         <label className='form__field'>
           <span>{LabelName.Name} </span>
           <input
@@ -87,6 +87,7 @@ function EditEmployeeForm({ employee }: EditEmployeeFormProps): JSX.Element {
               },
               required: 'Заполните поле',
             })}
+            data-testid="phone-field"
           />
         </label>
         {errors.phone && <p className='form__error'> {errors.phone.message}</p>}

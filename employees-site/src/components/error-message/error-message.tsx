@@ -7,8 +7,8 @@ function ErrorMessage(): JSX.Element {
       navigate(AppRoute.Main);
     };
        return (
-      <div className="error-message">
-        <p className="error-message__info">Что-то пошло не так. Страница не существует</p>
+      <div className="error-message" >
+        <p data-testid='error-message' className="error-message__info">Что-то пошло не так. Страница не существует</p>
         <p className="error-message__back-link" onClick={handleRedirect}>На главную</p>
         </div>
     );

@@ -46,7 +46,8 @@ function AddEmployeeForm(): JSX.Element {
   
     return (
 <form onSubmit={handleSubmit(handleEmployeeSubmit)}>
-      <div className='form__fields'>
+      <div className='form__fields'  data-testid="add-employee"
+      >
         <label className='form__field'>
           <span>{LabelName.Name} </span>
           <input
@@ -56,6 +57,7 @@ function AddEmployeeForm(): JSX.Element {
             {...register(FormFieldName.Name, {
               required: 'Заполните поле',
             })}
+            data-testid="name-field"
           />
         </label>
         {errors.name && (

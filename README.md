@@ -43,3 +43,10 @@ npm run dev
 ```
 
 Приложение будет доступно на `http://localhost:4001/employees-site/#/`
+
+### Запуск тестов
+
+```bash
+cd employees-site
+npm run test
+```
